@@ -22,3 +22,5 @@ go.work
 
 # Docker Temp Files
 dbdata/
+
+node_modules/

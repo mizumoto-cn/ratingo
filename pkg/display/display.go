@@ -16,6 +16,7 @@ type DisplayRequest struct {
 }
 
 type DisplayResponse struct {
+	Topic   string  `json:"topic"`
 	Avg     float64 `json:"avg"`
 	Details []struct {
 		Name    string  `json:"name"`
@@ -85,6 +86,7 @@ func Display(client *ent.Client) gin.HandlerFunc {
 		}
 
 		c.JSON(http.StatusOK, DisplayResponse{
+			Topic:   tp.TopicName,
 			Avg:     avg,
 			Details: details,
 		})

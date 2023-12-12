@@ -22,7 +22,7 @@ CREATE TABLE Ratings (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE Analysis (
+CREATE TABLE Analyses (
   id INT AUTO_INCREMENT,
   topic_id INT,
   avg_rating FLOAT,

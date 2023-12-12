@@ -20,6 +20,7 @@ type CollectRequest struct {
 type CollectResponse struct {
 	Success bool `json:"success"`
 	ID      int  `json:"id"`
+	TopicID int  `json:"topic_id"`
 }
 
 func Collect(client *ent.Client) gin.HandlerFunc {
@@ -64,7 +65,7 @@ func Collect(client *ent.Client) gin.HandlerFunc {
 			return
 		}
 
-		c.JSON(http.StatusOK, CollectResponse{Success: true, ID: rating.ID})
+		c.JSON(http.StatusOK, CollectResponse{Success: true, ID: rating.ID, TopicID: t.ID})
 
 	}
 }

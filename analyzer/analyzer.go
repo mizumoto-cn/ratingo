@@ -37,7 +37,7 @@ func Analyze(client *ent.Client) gin.HandlerFunc {
 		// if amount is 0, set avg to 0
 		// else calculate the average rating
 		ratings, err := client.Rating.Query().
-			Where(rating.HasUnderTopicOfWith(topic.IDEQ(tp.ID))).
+			Where(rating.TopicIDEQ(tp.ID)). // filter by topic
 			All(c)
 
 		if err != nil {

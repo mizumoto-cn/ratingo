@@ -57,7 +57,7 @@ func main() {
 	{
 		v1.POST("/collect", collector.Collect(db))
 		v1.POST("/analyze", analyzer.Analyze(db))
-		v1.GET("/display", display.Display(db))
+		v1.POST("/display", display.Display(db))
 	}
 
 	r.Run()

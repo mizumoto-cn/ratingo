@@ -38,7 +38,7 @@ func TestCollect(t *testing.T) {
 	reqBodyBytes, _ := json.Marshal(reqBody)
 	req, _ := http.NewRequest(http.MethodPost, "/collect", bytes.NewBuffer(reqBodyBytes))
 	req.Header.Set("Content-Type", "application/json")
-
+	fmt.Printf("%+v\n", req)
 	// Record the response
 	resp := httptest.NewRecorder()
 
