@@ -30,6 +30,7 @@
 <script setup lang="ts">
 import axios from 'axios';
 import { ref, onMounted, computed } from 'vue';
+import router from '@/router';
 
 const topic = ref('');
 const value = ref(0);
@@ -85,6 +86,10 @@ const handleSizeChange = (val: number) => {
 const handleCurrentChange = (val: number) => {
     currentPage.value = val;
 };
+
+const back = () => {
+    router.push({ path: '/' });
+}
 
 </script>
 
