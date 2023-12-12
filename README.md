@@ -154,6 +154,6 @@ You can see the result at [trojan.mizumoto.tech:16686](<http://trojan.mizumoto.t
 
 ### CI/CD
 
-The project is developed on GitHub, and the CI/CD is done by GitHub Actions.
+The project is developed on GitHub, and the CI/CD will be done by GitHub Actions.
 
 Auto build and deploy to the server when a new commit is pushed to the master branch.
