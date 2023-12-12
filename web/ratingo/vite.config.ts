@@ -17,7 +17,8 @@ export default defineConfig({
     port: 8081,
     proxy: {
       '/api': {
-        target: 'http://localhost:8082/v1',
+        // target: 'http://localhost:8082/v1',
+        target: 'http://trojan.mizumoto.tech:8082/v1',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
