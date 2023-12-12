@@ -46,6 +46,9 @@ Most of which can be get through docker compose file or `go get`
 
 * **Architecture**
   * The system is divided into separate parts (Data Collection, Data Analysis, and Frontend UI) to allow for scalability and modularity. The Data Collection and Data Analysis parts are connected through RESTful API.
+
+![](assets/diagram.drawio%20(1).png)
+
 * **RESTful API**
   * The RESTful API is used to connect the Data Collection and Data Analysis parts of the system.
 * **Database**
