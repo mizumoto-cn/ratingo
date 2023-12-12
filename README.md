@@ -39,6 +39,7 @@ See [trojan.mizumoto.tech:8081](<http://trojan.mizumoto.tech:8081>)
   * Ent: Ent is an entity framework for Go that is used as an ORM for handling database operations.
   * Wire: Wire is a code generation tool for dependency injection in Go.
   * Jaeger: Jaeger is used for distributed tracing to monitor and troubleshoot transactions in complex distributed systems.
+  * RabbitMQ: RabbitMQ will be used as a message broker for the system.
 
 Most of which can be get through docker compose file or `go get`
 
