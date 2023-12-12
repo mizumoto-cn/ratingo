@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/mizumoto-cn/ratingo/analyzer"
 	"github.com/mizumoto-cn/ratingo/collector"
@@ -52,6 +53,14 @@ func main() {
 	// Set up Gin engine and routes
 	r := gin.Default()
 	r.Use(ginhttp.Middleware(tracer))
+
+	conf := cors.DefaultConfig()
+	conf.AllowOrigins = []string{"http://trojan.mizumoto.tech:8081", "http://localhost:8081", "http://trojan.mizumoto.tech:8082"}
+	
+	conf.AllowMethods = []string{"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"}
+	conf.AllowHeaders = []string{"Origin", "Content-Length", "Content-Type"}
+
+	r.Use(cors.New(conf))
 
 	v1 := r.Group("/v1")
 	{
